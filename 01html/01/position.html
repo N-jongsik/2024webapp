@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        html,body{
+            height: 100%;
+        }
+        body{
+            overflow: hidden;
+            /* 밖으로 나간 거 짤라줌 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxWrap{
+            width: 400px;
+            height: 400px;
+            background: skyblue;
+            position: relative;
+        }
+        .boxWrap div{
+            width: 100px;
+            height: 100px;
+
+        }
+        .boxWrap .box1{
+            background: #000;
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+        .boxWrap .box2{
+            background: red;
+            position: relative;
+            z-index: 2;
+        }
+        /* 나중에 들어온 박스가 이전에 있던 박스 위로 올라간다.(맨 마지막꺼가 위로 올라옴) */
+        .boxWrap .box2{
+            background: blue;
+            position: absolute;
+            top: 100px; left:50px;
+            z-index:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

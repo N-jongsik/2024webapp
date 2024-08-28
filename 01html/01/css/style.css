@@ -1,0 +1,312 @@
+@charset "utf-8";
+body{
+    height: 300vh;
+    /* 스크롤 3개 들어감 */
+    font-family: "Noto Sans KR", sans-serif;
+    /* 폰트 설정 부분 */
+}
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.hd{
+    box-shadow:0 0 10px rgba(0,0,0,0.3) ;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    /* fixed를 하려면 width값을 잡아줘야 */
+    z-index: 99999;
+}
+.menuWrap{
+    display: flex;
+    justify-content:space-between;
+    /* height: 70px; */
+    padding: 10px 0;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.menuWrap h1{
+    font-weight: 400;
+    text-align: center;
+}
+
+.menuWrap .gnb ul{display: flex;}
+.menuWrap .gnb li{width: 150px;height: 50px;}
+.menuWrap .gnb a{
+    display: inline-block;
+    height: 76px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 76px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+.menuWrap .gnb a:hover{
+    font-weight: bold;
+}
+
+
+.visual{
+    min-height: 100vh;
+
+    min-height: 600px;
+    margin-bottom: 50px;
+    /* 이렇게 하는것이 margin사이 벌리는게 제일 안전함 */
+}
+
+.intersect{
+    display: block;
+    unicode-bidi: isolate;
+    font-size: 16px;
+    letter-spacing: -.6px;
+    line-height: 1.63;
+}
+
+.intersect .sub_area{
+    padding-bottom: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.sub_area::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 5px;
+    background-color: #ffd44a;
+}
+
+.intersect .sub_area2{
+    padding-left: 624px;
+    font-size: 18px;
+    line-height: 1.56;
+}
+
+.top{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+}
+.banner .card{
+    width: 384px;
+    height: 580px;
+}
+.banner .card .imageWrap img{
+    transition: 0.3s;
+}
+/* hover위치 중요 img를 hover할 지 card를 hover할 지 */
+.banner .card .imageWrap:hover img{
+    /* transform: translate(0px,-20px) scale(1) rotate(10deg); */
+    /* translate(x축,y축) 양수는 밑으로, 음수는 위로 올라감 */
+    /* scale(크기)은 크기 rotate는 돌리기(각도) */
+    transform: translate(-20px,-20px);
+    box-shadow: 30px 30px 20px rgba(0,0,0,0.3);
+    /* rgba는 투명도 */
+}
+.banner .card .card-text{
+    padding: 16px 20px;   /* 패딩 왼쪽 오른쪽 */
+
+}
+.banner .card .card-text h3{
+    margin-bottom: 10px;
+}
+
+/* visual  */
+img{display: block;}
+
+.visual{background-color: skyblue;}
+
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff;
+}
+
+.visual .item{
+    width: 1920px;
+    height:1080px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+
+.visual .item.st1{
+    background-image: url(./net_photo1.jpg);
+}
+.visual .item.st2{
+    background-image: url(./net_photo2.jpg);
+}
+.visual .item.st3{
+    background-image: url(./net_photo3.jpg);
+}
+.visual .item.st4{
+    background-image: url(./net_photo4.jpg);
+}
+.visual .item.st5{
+    background-image: url(./net_photo5.jpg);
+}
+
+.visual .item .textWrap{
+    width: 1360px;
+    /* background-color: white; */
+    padding-left:20px;
+    color:white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5) ;
+}
+
+.visual .item .textWrap p{
+    display: block;
+    margin-top: 14px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* common  */
+.mb20{
+    display: table-cell;
+    width: 100%;
+    height: 210px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -2.6px;
+    vertical-align: bottom;
+    text-indent: -2px
+}
+
+.img-cts{
+    position: relative;
+    height: 462px;
+    margin-top: 160px;
+    padding-bottom: 500px;
+}
+
+.txtbox{
+    width: 1114px;
+    height: 338px;
+    padding: 102px 520px 102px 104px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #ffd44a;
+}
+
+.img-cts .txtbox p[data-v-0c004490] {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: -1px;
+}
+
+.img-cts .txtbox em[data-v-0c004490] {
+    display: block;
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.47;
+}
+
+.img-cts .img[data-v-0c004490] {
+    position: absolute;
+    top: 102px;
+    right: 0;
+    width: 592px;
+    height: 360px;
+    background: url(https://sgimage.netmarble.com/mobile/game/foundation/brand/v2/img/purpose.e6f7b36.jpg) no-repeat 0 0;
+}
+
+.main-notice {
+    background-color: #f7f8f9;
+}
+
+section {
+    /* display: block; */
+    unicode-bidi: isolate;
+}
+
+.main-notice .cont {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.cont {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 180px 32px;
+    /* background-color: blue; */
+}
+
+.notice-area {
+    position: relative;
+    /* background-color: red; */
+}
+
+.main-notice .tab-area {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.tab-area button {
+    display: inline-block;
+    height: 38px;
+    margin-left: 8px;
+    padding: 0 24px;
+    border-radius: 19px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px;
+    color: rgba(30, 30, 30, .5);
+}
+
+.sub_area .title{
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.41;
+    letter-spacing: -2px;
+    text-indent: -2px;
+}
+
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+section.intersect .ani02 {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: .5s .7s;
+    transition: .5s .7s;
+}

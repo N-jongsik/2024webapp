@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 변수 let, const
+    함수 arrow function
+    배열 spread operator
+    반복문 for of / map
+    class
+    promise 동기, 비동기 - async await
+    3Tier front, back, db
+     module -->
+
+     <script>
+        var test = 1 //어디에서나재선언 가능
+        let han = 11 //뒤에서 let han 사용 시 error
+        // han=10
+        // console.log(han)
+        // const han1 = 100 //const는 변하지 않는 값(상수)
+
+        // const obj = function(){
+        //     console.log(han)
+        // }
+
+        // 화살표 함수
+        const obj = (x,y) => {
+            console.log(han)
+            return x + y
+        }
+
+        const obj1 = (x,y) => x*y
+        obj1(10,10)
+        
+
+        console.log(obj(10,30));
+
+
+        const a = [1,2,3]
+        const b = [...a]
+        b[0] = 10
+        console.log("b:"+b);
+        console.log("a:"+a);
+
+        // for of 문
+        for(const item of a){
+            console.log(item)
+        }
+
+        for(let i = 0; i<a.length; i++){
+            console.log(a[i])
+        }
+
+     </script>
+
+</body>
+</html>
