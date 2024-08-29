@@ -203,22 +203,22 @@ img{display: block;}
 }
 
 .txtbox{
+    position: relative;
+    left: 150px;
     width: 1114px;
     height: 338px;
     padding: 102px 520px 102px 104px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     background-color: #ffd44a;
 }
 
-.img-cts .txtbox p[data-v-0c004490] {
+.img-cts .txtbox p{
     font-size: 28px;
     font-weight: 500;
     line-height: 1.43;
     letter-spacing: -1px;
 }
 
-.img-cts .txtbox em[data-v-0c004490] {
+.img-cts .txtbox em {
     display: block;
     margin-top: 24px;
     font-size: 15px;
@@ -226,10 +226,10 @@ img{display: block;}
     line-height: 1.47;
 }
 
-.img-cts .img[data-v-0c004490] {
+.img-cts .img {
     position: absolute;
     top: 102px;
-    right: 0;
+    right: 150px;
     width: 592px;
     height: 360px;
     background: url(https://sgimage.netmarble.com/mobile/game/foundation/brand/v2/img/purpose.e6f7b36.jpg) no-repeat 0 0;
@@ -287,26 +287,66 @@ section {
     letter-spacing: -2px;
     text-indent: -2px;
 }
-
-.main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+footer{
+    min-width: 1280px;
+    padding: 64px 0;
 }
-section.intersect .ani02 {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: .5s .7s;
-    transition: .5s .7s;
+
+.footer{
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: black;
+}
+
+.footer .net{
+    width: 152px;
+    height: 32px;
+}
+
+.footer .net a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.footer .copyright{
+    margin-top: 26px;
+    color: hsla(0, 0%, 88.2%, .5);
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.footer .policy{
+    margin-top: 46px;
+    color: hsla(0, 0%, 88.2%, .7);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer .policy a{
+    color: hsla(0, 0%, 88.2%, .7);
+    text-decoration: none;
+}
+
+.footer .sns{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    align-self: center;
+    gap:10px;
+    background-color: white;
+}
+
+.footer .sns .li{
+    width: 40px;height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50% ;
+    background: white;
+    color:white;
 }
