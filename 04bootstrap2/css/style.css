@@ -46,7 +46,9 @@
     background-color: #efefef;
     border: 0 none;
     transition: 0.3s;
+    /* 0.3초 정도 지연하기 */
     cursor: pointer;
+    /* 커서 포인터로 바꾸기 */
 }
 
 /* 마우스 다져다 대면 사이즈 커짐 */
@@ -57,4 +59,10 @@
 
 .service .card  img{
     height: 200px;
+}
+
+/* customer */
+
+.customer .item{
+    background-color: skyblue;
 }

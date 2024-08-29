@@ -146,7 +146,6 @@ img{display: block;}
     align-items: center;
     background-repeat: no-repeat;
     background-size:cover;
-
 }
 
 
@@ -286,10 +285,12 @@ section {
     line-height: 1.41;
     letter-spacing: -2px;
     text-indent: -2px;
+    padding-bottom: 20px;
 }
 footer{
     min-width: 1280px;
     padding: 64px 0;
+    background-color: black;
 }
 
 .footer{
@@ -297,7 +298,7 @@ footer{
     width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: black;
+    
 }
 
 .footer .net{
@@ -329,6 +330,7 @@ footer{
 .footer .policy a{
     color: hsla(0, 0%, 88.2%, .7);
     text-decoration: none;
+    
 }
 
 .footer .sns{
@@ -349,4 +351,12 @@ footer{
     border-radius:50% ;
     background: white;
     color:white;
+}
+
+.footer a{
+    margin: 0 10px;
+}
+
+.footer i{
+    margin: 0 10px;
 }
