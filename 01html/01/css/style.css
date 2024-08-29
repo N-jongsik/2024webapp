@@ -112,7 +112,7 @@ body{
     /* transform: translate(0px,-20px) scale(1) rotate(10deg); */
     /* translate(x축,y축) 양수는 밑으로, 음수는 위로 올라감 */
     /* scale(크기)은 크기 rotate는 돌리기(각도) */
-    transform: translate(-20px,-20px);
+    transform: translate(0,-20px);
     box-shadow: 30px 30px 20px rgba(0,0,0,0.3);
     /* rgba는 투명도 */
 }
