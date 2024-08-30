@@ -14,13 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
         integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.css"
+        integrity="sha512-UhvuUthI9VM4N3ZJ5o1lZgj2zNtANzr3zyucuZZDy67BO6Ep5+rJN2PST7kPj+fOI7M/7wVeYaSaaAICmIQ4sQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <!-- 이 파일의 위치는 위에 부트스트랩보다 다음에 있어야 내가 원하는 대로 작동함 -->
 </head>
 
 <body>
     <!-- 헤더쪽 네비게이션 바 만드는 부분 -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <nav class="header navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./images/logo.svg" alt="">
@@ -131,25 +137,170 @@
     </div>
 
     <!-- customer쪽  owl-carousel이용하기  -->
-    <div class="container customer pb-5">
-        <h2 class="text-center conTitle">CUSTOMER</h2>
-        <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
-        <div class="owl-carousel owl-theme">
-            <!-- owl theme추가 -->
-            <div class="item rounded">
-                <!-- rounded를 통해 끝에 둥그렇게 만들어주기 -->
-                <div class="sliderView d-flex gap-3 p-3 ">
-                    <!-- display:flex, gap-3 -> 간격 띄우기 -->
-                    <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
-                    <div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, omnis!</p>
-                        <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
-                        <!-- d-block하고 ms - auto로 따음표 오른쪽 끝으로 보내기 -->
+    <div class="bg-dark text-white py-5 mb-5">
+        <div class="container customer">
+            <h2 class="text-center conTitle">CUSTOMER</h2>
+            <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+            <div class="owl-carousel owl-theme">
+                <!-- owl theme추가 -->
+                <div class="item rounded">
+                    <!-- rounded를 통해 끝에 둥그렇게 만들어주기 -->
+                    <div class="sliderView d-flex gap-3 p-3 ">
+                        <!-- display:flex, gap-3 -> 간격 띄우기 -->
+                        <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
+                        <div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, omnis!</p>
+                            <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
+                            <!-- d-block하고 ms - auto로 따음표 오른쪽 끝으로 보내기 -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container portfolio">
+        <h2 class="text-center conTitle">PORTFOLIO</h2>
+        <p class="text-center mb-3">Lorem ipsum dolor sit amet.</p>
+        <div class="btn-group mb-3">
+            <button data-filter="" class="btn btn-primary active " id="btn">ALL</button>
+            <!-- ALL에다가 active가 기본 값 -->
+            <button data-filter=".web" class="btn btn-primary">WEB</button>
+            <button data-filter=".vue" class="btn btn-primary">VUE</button>
+            <button data-filter=".react" class="btn btn-primary">REACT</button>
+            <button data-filter=".jpa" class="btn btn-primary">JPA</button>
+        </div>
+        <div class="row view">
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/1.jpg" class="popup-link"><img src="./images/servicos/1.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item vue mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/2.jpg" class="popup-link"><img src="./images/servicos/2.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/3.jpg" class="popup-link"><img src="./images/servicos/3.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item jpa mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/4.jpg" class="popup-link"><img src="./images/servicos/4.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/5.jpg" class="popup-link"><img src="./images/servicos/5.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item view mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/6.jpg" class="popup-link"><img src="./images/servicos/6.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/7.jpg" class="popup-link"><img src="./images/servicos/7.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-lg-3 element-item jpa mb-3">
+                <!-- 이미지 할 때는 항상 img-fluid -->
+                <a href="./images/servicos/1.jpg" class="popup-link"><img src="./images/servicos/1.jpg" alt=""
+                        class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="online py-5 my-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="com-md-6  text-white text-center">
+                    <!-- offset 3을 먼저 먹고 그 다음부터 시작 다음 6을 먹는다 -->
+                    <h2>CONTACT US</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, eligendi!</p>
+                    <button class="btn btn-danger">NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-5">
+        <div class="container py-5 px-5">
+            <div class="row mb-5">
+                <div class="col-lg-3 mb-5">
+                    <img src="./images2/udacity-logo.png" alt="" style="width: 50px;">
+                </div>
+                <div class="col-6 col-lg mb-3 mb-0">
+                    <h4>company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg">
+                    <h4>company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg">
+                    <h4>company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg">
+                    <h4>company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <!-- row 는 flex임 -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <!-- md이상일 때는 start 아니면 jcc -->
+                    <ul class="d-flex justify-content-center justify-content-md-start">
+                        <li><a href="#!">PRIVACY</a></li>
+                        <li class="px-2">/</li>
+                        <li><a href="#!">TEAMS</a></li>
+                        <li class="px-2">/</li>
+                        <li><a href="#!">SITE MAP</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="d-flex gap-1 justify-content-center justify-content-md-end">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <p class="small">Lorem ipsum dolor sit.</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, illum!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <!-- cdnjs에서 사용할 라이브러리 가져오기 -->
 <!-- 제이쿼리 -->
@@ -164,6 +315,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- 이소토프 -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"
+    integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    //스크롤에 관련된 값을 가져올 수 있음
+    $(window).scroll(function(){
+        let scroll = $(window).scrollTop();
+        console.log(scroll);
+
+        //addClass 는 class추가 , removeClass는 class삭제
+        if(scroll > 300){
+            $(".header").addClass("fixed-top"); //300보다 크면 header fidxed-top고정
+        }
+        else{
+            $(".header").removeClass("fixed-top");
+        }
+    })
+
+
+
+
+</script>
+
+<!-- 버튼 누르면 active를 이용해 해당 버튼에 색깔 넣어주는 작업 -->
+<script>
+    const btns = $(".portfolio .btn-group button") //유사 배열
+
+    //클릭을 하면 어떤 것(번호)이 나오는 지 알 수 있음
+    btns.click(function () {
+        let i = $(this).index() //클릭 한 거의 인덱스
+        console.log(i);
+
+        btns.removeClass("active"); //기존의 active class지워주기
+        btns.eq(i).addClass("active"); //active는 bootstrap
+
+        let selector = btns.eq(i).attr("data-filter");
+        console.log(selector);
+
+        $(".portfolio .view").isotope({
+            filter: selector
+        })
+
+    })
+
+    $(".view .popup-link").magnificPopup({ type: "image" });
+
+    window.onload = function () {
+        $(".portfolio #btn").trigger("click");
+    }
+</script>
 
 <!-- owl-carousel live example -->
 <script>

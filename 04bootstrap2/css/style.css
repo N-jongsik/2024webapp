@@ -1,39 +1,51 @@
 @charset "utf-8";
 /* 한글때문에 하는거임 */
 
-:root{
-    --primary-color-1: pink;
-    --text-shadow-1:0 10px 10px rgba(0,0,0,0.3);
-    --shadow-1:rgba(0,0,0,0.3);
+:root {
+    --primary-color-1: white;
+    --text-shadow-1: 0 10px 10px rgba(0, 0, 0, 0.3);
+    --shadow-1: rgba(0, 0, 0, 0.3);
 }
 
-.testWrap{
-    background-color: var(--primary-color-1);   
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.testWrap {
+    background-color: var(--primary-color-1);
     box-shadow: 0 10px 10px var(--shadow-1);
 }
 
-.visualWrap{
+.visualWrap {
     background: url(../images/slider-bg.svg) no-repeat center;
     background-size: cover;
 }
 
-.shadow{
+.shadow {
     box-shadow: 0 5px 10px var(--shadow-1) !important;
 }
 
-.conTitle{
+.conTitle {
     position: relative;
 
 }
 
 /* 라인 만들기 */
-.conTitle:after{
+.conTitle:after {
     content: "";
     display: block;
     width: 100px;
     height: 1px;
     background-color: var(--primary-color-1);
-    margin: 10px auto; 
+    margin: 10px auto;
     /* 블럭 단위일 때 가운데 정렬 -> margin 0 auto */
 
     /* 동그라미 만들기 */
@@ -42,7 +54,7 @@
     border-radius: 50%; */
 }
 
-.service .card{
+.service .card {
     background-color: #efefef;
     border: 0 none;
     transition: 0.3s;
@@ -52,17 +64,32 @@
 }
 
 /* 마우스 다져다 대면 사이즈 커짐 */
-.service .card:hover{
-    transform: scale(1.1) translate(-20px,-20px);
-    box-shadow: 15px 15px 20px var(--shadow-1)  
+.service .card:hover {
+    transform: scale(1.1) translate(-20px, -20px);
+    box-shadow: 15px 15px 20px var(--shadow-1)
 }
 
-.service .card  img{
+.service .card img {
     height: 200px;
 }
 
 /* customer */
 
-.customer .item{
+.customer .item {
     background-color: skyblue;
+}
+
+/* online */
+
+.online {
+    background: url("../images2/contact-cover.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* 배경이 움직임 */
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-color-1);
 }
