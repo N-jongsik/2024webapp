@@ -1,12 +1,12 @@
 <template>
-   <div class="conWrap mb-10">
+   <div class="conWrap">
       <div class="container menu">
          <a href="#" class="on">영화</a>
-         <a href="#">방송</a>
-         <a href="#">래킹</a>
-         <a href="#">무료</a>
-         <a href="#">이벤트</a>
-         <a href="#">멤버십</a>
+         <a href="#" class="on">방송</a>
+         <a href="#" class="on">랭킹</a>
+         <a href="#" class="on">무료</a>
+         <a href="#" class="on">이벤트</a>
+         <a href="#" class="on">멤버십</a>
       </div>
    </div>
 </template>
@@ -18,36 +18,29 @@ export default {};
 <style lang="scss" scoped>
 .conWrap {
    width: 100%;
-   //    background-color: skyblue;
-   border-bottom: 1px solid #888;
-   //    padding: 16px 0;
-
+   border-bottom: 1px solid #333;
+   padding: 16px 0;
    .menu {
       display: flex;
       a {
          display: block;
+         background-color: pink;
+         padding-right: 40px;
          margin-right: 5px;
-         font-weight: bold;
          position: relative;
          padding: 16px 0;
-         padding-right: 40px;
       }
       @media screen and (max-width: 560px) {
-         a {
-            padding-right: 15px;
-         }
+         padding-right: 15px;
       }
-
-      a.on:after,
-      a:hover:after {
+      a:hover::after {
          content: '';
-         //  display: block;
+         background-color: green;
          position: absolute;
          width: 50px;
          height: 5px;
-         bottom: -3px;
+         bottom: 19px;
          left: 0;
-         background-color: rgb(80, 124, 14);
       }
    }
 }

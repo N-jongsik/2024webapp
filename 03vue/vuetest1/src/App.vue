@@ -1,6 +1,10 @@
 <template>
    <NavbarView />
-   <ContainerView :data="data" :num="selectedNum" @openModal="modalOpen" />
+   <SearchBarView :data="data_temp" @searchMovie="searchMovie" />
+   <div class="container">
+      <button @click="showAllView">전체보기</button>
+   </div>
+   <ContainerView :data="data_temp" :num="selectedNum" @openModal="modalOpen" />
    <ModalView :data="data" :isModal="isModal" :num="selectedNum" @closeModal="isModal = false" />
 </template>
 
@@ -9,14 +13,16 @@ import mdata from './assets/mdata';
 import NavbarView from './components/NavbarView.vue';
 import ModalView from './components/ModalView.vue';
 import ContainerView from './components/ContainerView.vue';
+import SearchBarView from './components/SearchBarView.vue';
 
 export default {
    name: 'appView',
    data() {
       return {
-         data: mdata,
+         data: mdata, //기존의 data
          isModal: false,
          selectedNum: 0,
+         data_temp: [...mdata], //변형된 data
       };
    },
    methods: {
@@ -31,11 +37,21 @@ export default {
       closeM() {
          this.isModal = false;
       },
+      searchMovie(title) {
+         console.log('영화이름 : ' + title);
+         this.data_temp = this.data.filter(movie => {
+            return movie.title.includes(title);
+         });
+      },
+      showAllView() {
+         this.data_temp = [...this.data];
+      },
    },
    components: {
       NavbarView: NavbarView,
       ModalView: ModalView,
       ContainerView: ContainerView,
+      SearchBarView: SearchBarView,
    },
 };
 </script>
