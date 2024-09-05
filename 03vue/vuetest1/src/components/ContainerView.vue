@@ -12,7 +12,7 @@
                <p>❤️ {{ item.num }}</p>
                <p>대여 {{ item.won }}</p>
                <p>{{ item.id }}</p>
-               <!-- <p>👍 {{ item.like }} <button v-on:click="increseLike(i)">클릭</button></p> -->
+               <p>👍 {{ item.like }} <button @:click="$emit('increaseLike', i)">클릭</button></p>
             </div>
             <div class="btn btn-primary" v-on:click="$emit('openModal', i)">상세보기</div>
          </div>

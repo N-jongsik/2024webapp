@@ -4,7 +4,7 @@
    <div class="container">
       <button @click="showAllView">전체보기</button>
    </div>
-   <ContainerView :data="data_temp" :num="selectedNum" @openModal="modalOpen" />
+   <ContainerView :data="data_temp" :num="selectedNum" @openModal="modalOpen" @increaseLike="increaseLike($event)" />
    <ModalView :data="data" :isModal="isModal" :num="selectedNum" @closeModal="isModal = false" />
 </template>
 
@@ -26,7 +26,7 @@ export default {
       };
    },
    methods: {
-      increseLike(i) {
+      increaseLike(i) {
          console.log(i);
          this.data[i].like += 1;
       },
