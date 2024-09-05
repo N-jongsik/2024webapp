@@ -4,8 +4,16 @@
     repudiandae doloribus unde itaque hic eligendi repellat. Eos, obcaecati
     similique.
   </div>
+  <h1>{{ $route.params }} / {{ $route.name }}</h1>
+  <hr />
+  <h2>{{ $route }}</h2>
+  <div class="btn btn-primary" @click="$router.push({ name: home })">home</div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  data: Array,
+});
+</script>
 
 <style lang="scss" scoped></style>
