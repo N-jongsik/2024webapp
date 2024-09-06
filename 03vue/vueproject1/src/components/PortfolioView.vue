@@ -1,11 +1,11 @@
 <template>
   <div
-    class="conatiner-fluid d-flex justify-content-center align-items-center"
+    class="container-fluid d-flex justify-content-center align-items-center"
     style="min-height: 100vh"
     id="portfolio"
   >
     <div class="container">
-      <h2 class="text-center">portfolio</h2>
+      <h2 class="text-center">Portfolio</h2>
       <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
 
       <div class="row">
@@ -15,7 +15,7 @@
           <img
             src="../assets/images/illustration-features-tab-1.svg"
             alt=""
-            class="img-fluid"
+            class="img-fluid mb-3"
             style="height: 200px"
           />
           <div
@@ -31,7 +31,7 @@
           <img
             src="../assets/images/illustration-features-tab-2.svg"
             alt=""
-            class="img-fluid"
+            class="img-fluid mb-3"
             style="height: 200px"
           />
           <div
@@ -41,14 +41,13 @@
             view
           </div>
         </div>
-
         <div
           class="col-md-4 text-center mb-3 d-flex flex-column align-items-center"
         >
           <img
             src="../assets/images/illustration-features-tab-3.svg"
             alt=""
-            class="img-fluid"
+            class="img-fluid mb-3"
             style="height: 200px"
           />
           <div

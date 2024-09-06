@@ -1,11 +1,11 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../components/HomeView.vue";
-import DetailView from "../components/DetailView.vue";
 import AboutView from "../components/AboutView.vue";
 import PortfolioView from "../components/PortfolioView.vue";
+import DetailView from "../components/DetailView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
@@ -23,8 +23,8 @@ const router = createRouter({
       component: PortfolioView,
     },
     {
-      path: "/portfolio/:id",
-      name: "detail",
+      path: "/portfolio/:num",
+      name: "portfolioView",
       component: DetailView,
     },
   ],

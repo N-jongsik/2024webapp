@@ -1,7 +1,7 @@
 <template>
   <div
-    class="conatiner-fluid d-flex justify-content-center align-items-center"
-    style="height: 100vh"
+    class="container-fluid d-flex justify-content-center align-items-center"
+    style="min-height: 100vh"
     id="about"
   >
     <div class="container">
@@ -16,9 +16,9 @@
           />
         </div>
         <div class="col-md-5">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          repellendus ipsa corporis nobis possimus cupiditate nam ea, eius
-          excepturi doloremque.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+          magnam praesentium animi et asperiores explicabo quas in provident
+          fuga. Tenetur?
         </div>
       </div>
       <div class="row">
@@ -32,7 +32,7 @@
             aria-valuemin="0"
             aria-valuemax="100"
           >
-            <div class="progress-bar" style="width: 30%"></div>
+            <div class="progress-bar" style="width: 50%"></div>
           </div>
         </div>
       </div>

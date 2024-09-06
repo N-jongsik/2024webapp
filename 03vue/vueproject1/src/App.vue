@@ -1,14 +1,12 @@
 <template>
   <NavbarView />
-  <!-- <HomeView />
-  <AboutView />
-  <PortfolioView /> -->
   <router-view :data="init" />
 </template>
 
 <script setup>
-import NavbarView from "./components/NavbarView.vue";
 import { ref } from "vue";
+import NavbarView from "./components/NavbarView.vue";
+
 const init = ref([
   { id: 1, title: "title1" },
   { id: 2, title: "title2" },
@@ -18,7 +16,6 @@ const init = ref([
   { id: 6, title: "title6" },
   { id: 7, title: "title7" },
   { id: 8, title: "title8" },
-  { id: 9, title: "title9" },
 ]);
 </script>
 
