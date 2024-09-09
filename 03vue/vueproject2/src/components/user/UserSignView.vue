@@ -4,7 +4,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="userid"
+        placeholder="아이디"
         v-model="userData.userid"
       />
     </div>
@@ -12,7 +12,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="password"
+        placeholder="비밀번호"
         v-model="userData.password"
       />
     </div>
@@ -20,7 +20,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="username"
+        placeholder="이름"
         v-model="userData.username"
       />
     </div>
@@ -28,7 +28,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="addr"
+        placeholder="주소"
         v-model="userData.addr"
       />
     </div>
@@ -36,15 +36,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="favorite-team"
-        v-model="userData.team"
-      />
-    </div>
-    <div class="mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="latitude"
+        placeholder="위도"
         v-model="userData.latitude"
       />
     </div>
@@ -52,8 +44,24 @@
       <input
         type="text"
         class="form-control"
-        placeholder="longitude"
+        placeholder="경도"
         v-model="userData.longitude"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="응원하는 팀"
+        v-model="userData.team"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="응원하는 팀 영상 url"
+        v-model="userData.video"
       />
     </div>
     <div class="input-group mb-3">
@@ -66,23 +74,15 @@
       />
       <label class="input-group-text" for="fileform">이미지 Upload</label>
     </div>
-    <div class="input-group mb-3">
-      <input
-        type="file"
-        class="form-control"
-        id="videoform"
-        @change="handleVideo"
-        accept="video/*"
-      />
-      <label class="input-group-text" for="fileform">동영상 Upload</label>
-    </div>
-    <div class="btn btn-primary" @click="addUser">회원가입</div>
+    <div class="btn btn-primary mb-5" @click="addUser">회원가입</div>
   </div>
+  <FoodMapView />
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useStore } from "vuex";
+import FoodMapView from "./FoodMapView.vue";
 
 const store = useStore();
 
@@ -91,7 +91,11 @@ const userData = ref({
   password: null,
   username: null,
   addr: null,
+  latitude: null,
+  longitude: null,
+  team: null,
   image: null,
+  video: null,
 });
 
 const clearform = () => {
@@ -99,6 +103,10 @@ const clearform = () => {
   userData.value.password = null;
   userData.value.username = null;
   userData.value.addr = null;
+  userData.value.latitude = null;
+  userData.value.longitude = null;
+  userData.value.team = null;
+  userData.value.image = null;
 };
 
 const addUser = () => {
@@ -108,6 +116,10 @@ const addUser = () => {
     username: userData.value.username,
     addr: userData.value.addr,
     image: userData.value.image,
+    latitude: parseFloat(userData.value.latitude),
+    longitude: parseFloat(userData.value.longitude),
+    team: userData.value.team,
+    video: userData.value.video,
   };
   store.commit("addUser", uData);
   clearform();
@@ -118,14 +130,6 @@ const handleImage = (e) => {
   console.log(file);
   if (file) {
     userData.value.image = URL.createObjectURL(file);
-  }
-};
-
-const handleVideo = (e) => {
-  const file = e.target.files[0];
-  console.log(file);
-  if (file) {
-    userData.value.video = URL.createObjectURL(file);
   }
 };
 </script>

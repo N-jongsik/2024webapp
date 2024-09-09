@@ -9,11 +9,9 @@ export default createStore({
         username: "남종식",
         addr: "서울",
         team: "LG Twins",
-        stadium: "잠실야구장",
         image: "https://picsum.photos/100",
-        id: 1,
-        latitude: 37.2151,
-        longitude: 119.2127,
+        latitude: 37.51215,
+        longitude: 127.071976,
         video: "https://www.youtube.com/embed/KMP68_JFsUg?si=rMjWe-jZxfGY1OS3",
       },
       {
@@ -22,11 +20,9 @@ export default createStore({
         username: "홍삼이",
         addr: "부산",
         team: "Lotte Giants",
-        stadium: "사직야구장",
         image: "https://picsum.photos/200",
-        id: 2,
-        latitude: 33.5665,
-        longitude: 126.978,
+        latitude: 35.1139,
+        longitude: 129.0342,
         video: "https://www.youtube.com/embed/HfqKC-G3dDA?si=UJlO4Q1Db7K-hg5K",
       },
       {
@@ -35,26 +31,29 @@ export default createStore({
         username: "종식",
         addr: "광주",
         team: "KIA Tigers",
-        stadium: "챔피언스필드",
         image: "https://picsum.photos/300",
-        id: 3,
-        latitude: 35.5651,
-        longitude: 121.9827,
+        latitude: 35.16942496,
+        longitude: 126.8888055,
         video: "https://www.youtube.com/embed/4I9XA-bwi8U?si=IvWOiB-r5ntEWf2B",
       },
     ],
+  },
+  getters: {
+    getUserData: (state) => state.userData,
   },
   mutations: {
     addUser(state, payload) {
       state.userData.push(payload);
     },
     deleteUser(state, payload) {
-      state.userData = state.userData.filter((user) => user.id !== payload);
+      state.userData = state.userData.filter((user) => user.userid !== payload);
     },
     updateUser(state, payload) {
-      const index = state.userData.findIndex((user) => user.id === payload.id);
+      const index = state.userData.findIndex(
+        (user) => user.userid === payload.userid
+      );
       if (index !== -1) {
-        state.userData[index] = updatedUser;
+        state.userData[index] = payload; // 수정된 사용자 정보로 교체
       }
     },
   },

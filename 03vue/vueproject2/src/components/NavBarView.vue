@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md bg-body-tertiary p-3 mb-3">
+  <nav class="navbar navbar-expand-md bg-body-tertiary p-3">
     <div class="container">
       <router-link class="navbar-brand" to="/"
         ><img src="../assets/images/logo-opera.svg" alt=""
@@ -22,6 +22,9 @@
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/user">USER</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/map">MAP</router-link>
           </li>
         </ul>
       </div>

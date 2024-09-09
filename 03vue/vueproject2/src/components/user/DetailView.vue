@@ -1,18 +1,17 @@
 <template>
   <div class="container mt-5">
     <div class="row">
-      <div class="card p-3 col-md-6">
-        <h3 class="card p-3" v-if="item">아이디 : {{ item.userid }}</h3>
-        <h3 class="card p-3" v-if="item">이름 : {{ item.username }}</h3>
-        <h3 class="card p-3" v-if="item">주소 : {{ item.addr }}</h3>
-        <h3 class="card p-3" v-if="item">응원 team : {{ item.team }}</h3>
-        <h3 class="card p-3" v-if="item">Home 경기장 : {{ item.stadium }}</h3>
+      <div class="card p-3 col-md-6 mb-5">
+        <h5 class="card p-3" v-if="item">아이디 : {{ item.userid }}</h5>
+        <h5 class="card p-3" v-if="item">이름 : {{ item.username }}</h5>
+        <h5 class="card p-3" v-if="item">주소 : {{ item.addr }}</h5>
+        <h5 class="card p-3" v-if="item">응원 team : {{ item.team }}</h5>
         <MapView :latitude="item.latitude" :longitude="item.longitude" />
       </div>
       <div class="col-md-6">
-        <h3 class="card p-3 mb-5 text-center" v-if="item">
+        <h5 class="card p-3 mb-5 text-center" v-if="item">
           {{ item.team }} 최고의 순간
-        </h3>
+        </h5>
         <iframe
           width="100%"
           height="315"
@@ -40,8 +39,9 @@ const route = useRoute();
 
 // 라우트의 num 파라미터에 해당하는 아이템 찾기
 const item = computed(() => {
-  const id = parseInt(route.params.num); // 라우트에서 num을 정수로 변환
-  return store.state.userData.find((user) => user.id === id); // Vuex의 userData에서 일치하는 id 찾기
+  // const id = parseInt(route.params.num); // 라우트에서 num을 정수로 변환
+  const userid = route.params.userid;
+  return store.state.userData.find((user) => user.userid === userid); // Vuex의 userData에서 일치하는 id 찾기
 });
 
 console.log(item.value);

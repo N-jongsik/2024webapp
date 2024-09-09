@@ -2,13 +2,14 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import UserView from "../views/UserView.vue";
 import DetailView from "../components/user/DetailView.vue";
+import FullMapView from "../components/user/FullMapView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "main",
       component: HomeView,
     },
     {
@@ -22,7 +23,12 @@ const router = createRouter({
       component: UserView,
     },
     {
-      path: "/user/:num",
+      path: "/map",
+      name: "map",
+      component: FullMapView,
+    },
+    {
+      path: "/user/:userid",
       name: "UserDetail",
       component: DetailView,
     },
