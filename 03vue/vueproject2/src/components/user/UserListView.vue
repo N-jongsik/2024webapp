@@ -23,7 +23,7 @@
         <button @click="editUser(item)" class="sbtn bt2">수정</button>
       </div>
     </div>
-    <div class="modal-wrap" v-if="editMode">
+    <div class="modal-wrap" style="z-index: 999" v-if="editMode">
       <div class="col-md-6 modal-container">
         <div>
           <div class="mb-3">
