@@ -31,7 +31,7 @@ function App() {
       </button>
       <button
         onClick={() => {
-          setNum(10);
+          setNum(num + 1);
         }}
       >
         num
