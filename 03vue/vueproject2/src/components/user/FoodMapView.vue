@@ -6,13 +6,16 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, defineEmits } from "vue";
+import { watch } from "vue";
 
 const latitude = ref(0);
 const longitude = ref(0);
 
 const moveLat = ref(0);
 const moveLng = ref(0);
+
+const emit = defineEmits(["update-latlng"]);
 
 onMounted(() => {
   if (!("geolocation" in navigator)) {
@@ -71,6 +74,11 @@ const initMap = () => {
     moveLng.value = latlng.getLng();
   });
 };
+// watch를 사용해 moveLat 또는 moveLng 값이 변할 때 이벤트를 emit
+watch([moveLat, moveLng], () => {
+  // 부모 컴포넌트로 이벤트 전송
+  emit("update-latlng", { lat: moveLat.value, lng: moveLng.value });
+});
 </script>
 
 <style lang="scss" scoped></style>

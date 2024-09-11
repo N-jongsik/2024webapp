@@ -76,7 +76,7 @@
     </div>
     <div class="btn btn-primary mb-5" @click="addUser">회원가입</div>
   </div>
-  <FoodMapView />
+  <FoodMapView @update-latlng="handleLatLngUpdate" />
 </template>
 
 <script setup>
@@ -131,6 +131,12 @@ const handleImage = (e) => {
   if (file) {
     userData.value.image = URL.createObjectURL(file);
   }
+};
+
+// update-latlng 이벤트 처리
+const handleLatLngUpdate = ({ lat, lng }) => {
+  userData.value.latitude = lat;
+  userData.value.longitude = lng;
 };
 </script>
 
