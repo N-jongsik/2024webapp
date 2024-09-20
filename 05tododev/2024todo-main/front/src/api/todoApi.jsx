@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_SERVER_HOST = "http://loaclhost:8081";
+const API_SERVER_HOST = "http://localhost:8081";
 const prefix = `${API_SERVER_HOST}/api/todo`;
 
 //localhost:8081/api/todo/list?page=1&size=10
@@ -17,6 +17,7 @@ export const getOne = async (tno) => {
   return res;
 };
 
-export const postAdd = (obj) => {
-  axios.post(`${prefix}/`, obj);
+export const postAdd = async (obj) => {
+  const res = await axios.post(`${prefix}/`, obj);
+  return res;
 };
